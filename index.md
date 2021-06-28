@@ -1,37 +1,128 @@
-## Welcome to GitHub Pages
-
-You can use the [editor on GitHub](https://github.com/Viku-51/Solver-Sudoko/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Viku-51/Solver-Sudoko/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Backtracking</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Modak&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="header"><h4>SOLVING SUDOKU USING BACKTRAKING<h4></div>
+      <div class ="container">
+        <div class="button-group-one">
+          <button id="solve">Solve</button>
+          <button id="reset">Reset</button>
+        </div>
+        <table>
+          <tbody>
+            <tr>
+              <td id="zero-zero">0</td>
+              <td id="zero-one">0</td>
+              <td id="zero-two">0</td>
+              <td id="zero-three">0</td>
+              <td id="zero-four">0</td>
+              <td id="zero-five">0</td>
+              <td id="zero-six">0</td>
+              <td id="zero-seven">0</td>
+              <td id="zero-eight">0</td>
+            </tr>
+            <tr>
+              <td id="one-zero">0</td>
+              <td id="one-one">0</td>
+              <td id="one-two">0</td>
+              <td id="one-three">0</td>
+              <td id="one-four">0</td>
+              <td id="one-five">0</td>
+              <td id="one-six">0</td>
+              <td id="one-seven">0</td>
+              <td id="one-eight">0</td>
+            </tr>
+            <tr>
+              <td id="two-zero">0</td>
+              <td id="two-one">0</td>
+              <td id="two-two">0</td>
+              <td id="two-three">0</td>
+              <td id="two-four">0</td>
+              <td id="two-five">0</td>
+              <td id="two-six">0</td>
+              <td id="two-seven">0</td>
+              <td id="two-eight">0</td>
+            </tr>
+            <tr>
+              <td id="three-zero">0</td>
+              <td id="three-one">0</td>
+              <td id="three-two">0</td>
+              <td id="three-three">0</td>
+              <td id="three-four">0</td>
+              <td id="three-five">0</td>
+              <td id="three-six">0</td>
+              <td id="three-seven">0</td>
+              <td id="three-eight">0</td>
+            </tr>
+            <tr>
+              <td id="four-zero">0</td>
+              <td id="four-one">0</td>
+              <td id="four-two">0</td>
+              <td id="four-three">0</td>
+              <td id="four-four">0</td>
+              <td id="four-five">0</td>
+              <td id="four-six">0</td>
+              <td id="four-seven">0</td>
+              <td id="four-eight">0</td>
+            </tr>
+            <tr>
+              <td id="five-zero">0</td>
+              <td id="five-one">0</td>
+              <td id="five-two">0</td>
+              <td id="five-three">0</td>
+              <td id="five-four">0</td>
+              <td id="five-five">0</td>
+              <td id="five-six">0</td>
+              <td id="five-seven">0</td>
+              <td id="five-eight">0</td>
+            </tr>
+            <tr>
+              <td id="six-zero">0</td>
+              <td id="six-one">0</td>
+              <td id="six-two">0</td>
+              <td id="six-three">0</td>
+              <td id="six-four">0</td>
+              <td id="six-five">0</td>
+              <td id="six-six">0</td>
+              <td id="six-seven">0</td>
+              <td id="six-eight">0</td>
+            </tr>
+            <tr>
+              <td id="seven-zero">0</td>
+              <td id="seven-one">0</td>
+              <td id="seven-two">0</td>
+              <td id="seven-three">0</td>
+              <td id="seven-four">0</td>
+              <td id="seven-five">0</td>
+              <td id="seven-six">0</td>
+              <td id="seven-seven">0</td>
+              <td id="seven-eight">0</td>
+            </tr>
+            <tr>
+              <td id="eight-zero">0</td>
+              <td id="eight-one">0</td>
+              <td id="eight-two">0</td>
+              <td id="eight-three">0</td>
+              <td id="eight-four">0</td>
+              <td id="eight-five">0</td>
+              <td id="eight-six">0</td>
+              <td id="eight-seven">0</td>
+              <td id="eight-eight">0</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="button-group-two">
+          <button id="random-one">Random Board One</button>
+          <button id="random-two">Random Board Two</button>
+          <button id="random-three">Random Board Three</button>
+        </div>
+      </div>
+    <script type="text/javascript" src="script.js">
+    </script>
+  </body>
+  </html>
