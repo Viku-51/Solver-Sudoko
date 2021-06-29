@@ -1,2 +1,2 @@
 # Solver-Sudoko
-The sudoku solver sing the concept of backtracking
+The sudoku solver using the concept of backtracking
